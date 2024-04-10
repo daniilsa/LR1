@@ -2,4 +2,5 @@
 
 #include <vector>
 
-std::pair<int, int> countAndSum(const std::vector<int>& array);
+std::pair<int, std::vector<int>> replaceAndSum(const std::vector<int>& array);
+bool hasOddDigits(int num);

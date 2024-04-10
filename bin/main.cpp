@@ -3,10 +3,23 @@
 
 #include <lib/lr1.h>
 
-int main() {
-    std::vector<int> arr = {10, 14, 15, 20, 21, 25, 30};
-    std::pair<int, int> result = countAndSum(arr);
-    std::cout << "Number of elements that are divisible by 5 and not divisible by 7: " << result.first << std::endl;
-    std::cout << "Sum: " << result.second << std::endl;
+int main() 
+{
+    // Создаем массив целых чисел
+    std::vector<int> array = { 123, 456, 789, 321, 654 };
+
+    // Вызываем функцию replaceAndSum и сохраняем результат в переменной result
+    std::pair<int, std::vector<int>> result = replaceAndSum(array);
+
+    // Выводим сумму всех элементов массива
+    std::cout << "Summ: " << result.first << std::endl;
+
+    // Выводим новый массив
+    std::cout << "New Array: ";
+    for (int num : result.second) {
+        std::cout << num << " ";
+    }
+    std::cout << std::endl;
+
     return 0;
 }
